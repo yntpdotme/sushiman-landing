@@ -4,6 +4,7 @@
 
 /* Other CSS file imports */
 @import url("./sections/header.css");
+@import url("./sections/hero.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -74,3 +75,56 @@ a {
 	}
 }
 /* END: header media queries */
+
+/* START: hero-section media queries */
+@media screen and (max-width: 1060px) {
+	.hero {
+		flex-direction: column;
+	}
+
+	.hero-image img {
+		width: 100%;
+		margin-left: -30px;
+
+		transform: matrix(1, 0.05, 0, 1.25, 0, 0) !important;
+	}
+
+	.hero-content {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.hero-image h2 {
+		font-size: 70px;
+		line-height: 90px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.hero-image h2 {
+		font-size: 40px;
+		line-height: 60px;
+	}
+
+	.hero-content-info {
+		padding: 32px;
+	}
+
+	.hero-content-info h1 {
+		font-size: 60px;
+	}
+
+	.hero-content-info p {
+		margin: 32px 0;
+	}
+
+	.hero-content__buttons {
+		margin: 41px 0;
+	}
+
+	.hero-content__testimonial {
+		padding: 32px;
+	}
+}
+/* END: hero-section media queries */
