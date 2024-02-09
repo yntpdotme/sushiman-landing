@@ -150,21 +150,22 @@
 	align-items: center;
 	gap: 10px;
 
-	padding-left: 20px;
+	padding-left: 24px;
 	border-left: 1px solid rgba(2, 2, 2, 0.1);
 }
 
 .hero-content__review img {
-	width: 42px;
-	height: 42px;
+	width: 64px;
+	height: 64px;
 	object-fit: contain;
 }
 
 .hero-content__review p {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 400;
-	line-height: 32px;
+	line-height: 24px;
 	font-family: var(--plus-jakarta-sans);
+	text-align: center;
 	color: var(--secondary-color);
 	opacity: 0.8;
 }

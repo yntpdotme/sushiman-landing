@@ -6,6 +6,7 @@
 @import url("./sections/header.css");
 @import url("./sections/hero.css");
 @import url("./sections/about.css");
+@import url("./sections/popular.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -90,6 +91,17 @@ a {
 	margin: 32px 0px;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sushi__hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sushi__hide-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
 /* START: header media queries */
 @media screen and (max-width: 1024px) {
 	.header__nav {
@@ -159,8 +171,15 @@ a {
 		margin: 41px 0;
 	}
 
+	.hero-content__review {
+		border-left: none;
+		border-top: 1px solid rgba(2, 2, 2, 0.1);
+		padding: 20px 0 0;
+	}
+
 	.hero-content__testimonial {
 		padding: 32px;
+		flex-direction: column;
 	}
 }
 /* END: hero-section media queries */
@@ -205,7 +224,7 @@ a {
 	.about-us__image-sushi2 img,
 	.about-us__image-sushi3 img {
 		width: 50%;
-		height: 50%;
+		height: 160px;
 
 		object-fit: contain;
 	}
@@ -215,11 +234,35 @@ a {
 	}
 
 	.about-us__button {
-		top: 45%;
+		top: 44%;
 	}
 
-	.about-us__content {
+	.about-us__content div {
 		padding: 32px;
+		margin-top: 64px;
+	}
+
+	.sushi__title {
+		font-size: 48px;
 	}
 }
 /* END: about-us section media queries */
+
+/* START: popular section media queries */
+@media screen and (max-width: 1060px) {
+	.popular-foods__catalogue {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.popular-foods {
+		padding: 64px 32px;
+	}
+
+	.popular-foods__card,
+	.popular-foods__card.active-card {
+		min-width: 100%;
+	}
+}
+/* END: popular section media queries */
