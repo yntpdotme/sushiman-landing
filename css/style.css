@@ -8,6 +8,7 @@
 @import url("./sections/about.css");
 @import url("./sections/popular.css");
 @import url("./sections/trending.css");
+@import url("./sections/subcribe.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -259,6 +260,10 @@ a {
 }
 
 @media screen and (max-width: 550px) {
+	.popular-foods__title {
+		font-size: 48px;
+	}
+
 	.popular-foods {
 		padding: 64px 32px;
 	}
@@ -272,10 +277,10 @@ a {
 
 /* START: trending section media queries */
 @media screen and (min-width: 1025px) and (max-width: 1180px) {
-	.trending__content{
+	.trending__content {
 		margin: 24px 0;
 	}
-	
+
 	.trending__discover {
 		width: 130px;
 		height: 130px;
@@ -314,5 +319,44 @@ a {
 	.trending__content {
 		padding: 32px;
 	}
+
+	.trending__content .sushi__title{
+		font-size: 42px;
+	}
 }
 /* END: trending section media queries */
+
+/* START: subscribe media queries */
+@media screen and (max-width: 550px) {
+	.subscription {
+		padding: 64px 32px;
+	}
+
+	.subscription h2 {
+		font-size: 60px;
+		line-height: 100px;
+	}
+
+	.subscription__form {
+		flex-direction: column;
+		gap: 20px;
+
+		min-width: 100%;
+		padding: 0;
+
+		border: none;
+	}
+
+	.subscription__form input {
+		min-height: 50px;
+
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		padding: 10px 20px;
+		border-radius: 30px;
+	}
+
+	.subscription__form button {
+		min-width: 100%;
+	}
+}
+/* END: subscribe media queries */

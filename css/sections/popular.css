@@ -20,6 +20,7 @@
 	line-height: 78px;
 	color: #fff;
 	text-align: center;
+	word-break: keep-all;
 }
 
 .popular-foods__filters {
