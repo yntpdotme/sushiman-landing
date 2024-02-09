@@ -62,7 +62,7 @@
 }
 
 .hero-content-info p {
-	margin: 32px 0 0 32px;
+	margin: 32px 0 0;
 
 	font-family: var(--plus-jakarta-sans);
 	font-size: 18px;
@@ -70,10 +70,11 @@
 }
 
 .hero-content__buttons {
-	margin: 41px 0 0 41px;
+	margin-top: 41px;
 
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 36px;
 }
 

@@ -7,6 +7,7 @@
 @import url("./sections/hero.css");
 @import url("./sections/about.css");
 @import url("./sections/popular.css");
+@import url("./sections/trending.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -139,6 +140,7 @@ a {
 
 	.hero-content {
 		margin-top: 40px;
+		text-align: center;
 	}
 }
 
@@ -188,6 +190,7 @@ a {
 @media screen and (max-width: 1024px) {
 	.about-us {
 		flex-direction: column-reverse;
+		text-align: center;
 	}
 
 	.about-us__image {
@@ -266,3 +269,50 @@ a {
 	}
 }
 /* END: popular section media queries */
+
+/* START: trending section media queries */
+@media screen and (min-width: 1025px) and (max-width: 1180px) {
+	.trending__content{
+		margin: 24px 0;
+	}
+	
+	.trending__discover {
+		width: 130px;
+		height: 130px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.trending-sushi {
+		flex-direction: column;
+	}
+
+	.trending-drinks {
+		flex-direction: column-reverse;
+	}
+
+	.trending__image {
+		width: 100%;
+		background-size: cover;
+	}
+
+	.trending__discover {
+		display: none;
+	}
+
+	.trending__arrow {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.trending__image img {
+		width: 70%;
+		height: 70%;
+	}
+
+	.trending__content {
+		padding: 32px;
+	}
+}
+/* END: trending section media queries */
