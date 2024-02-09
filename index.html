@@ -26,7 +26,20 @@
 
 				<!-- Display Hamburger icon on small devices -->
 				<ul class="header__menu-mobile" data-aos="fade-down">
-					<li><img src="./assets/menu.svg" alt="menu" /></li>
+					<li >
+						<img src="./assets/menu.svg" alt="menu" data-dropdown-button />
+					</li>
+				</ul>
+
+				<!-- Display Dropdown Menu on small devices -->
+				<ul class="header__dropdown" data-dropdown>
+					<li>
+						<img src="./assets/close.svg" alt="close" data-dropdown-button />
+					</li>
+					<li><a href="#menu">Menu</a></li>
+					<li><a href="#food">Food</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#about-us">About Us</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -399,6 +412,6 @@
 		</footer>
 		<!-- END: footer section -->
 
-		<script type="module" src="js/script.js"></script>
+		<script type="module" src="./js/script.js"></script>
 	</body>
 </html>
