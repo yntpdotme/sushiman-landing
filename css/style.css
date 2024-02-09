@@ -5,6 +5,7 @@
 /* Other CSS file imports */
 @import url("./sections/header.css");
 @import url("./sections/hero.css");
+@import url("./sections/about.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -54,8 +55,43 @@ a {
 	align-items: center;
 }
 
+.sushi__subtitle {
+	font-size: 18px;
+	font-weight: 400;
+	font-family: var(--plus-jakarta-sans);
+
+	color: var(--primary-color);
+	opacity: 0.8;
+
+	letter-spacing: -0.01em;
+}
+
+.sushi__title {
+	font-size: 64px;
+	font-weight: 600;
+	font-family: var(--playfair-display);
+
+	color: var(--secondary-color);
+
+	margin-top: 16px;
+}
+
+.sushi__description {
+	font-size: 18px;
+	font-weight: 400;
+	font-family: var(--plus-jakarta-sans);
+
+	line-height: 36px;
+	letter-spacing: -0.01em;
+
+	color: var(--secondary-color);
+	opacity: 0.8;
+
+	margin: 32px 0px;
+}
+
 /* START: header media queries */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
 	.header__nav {
 		background-color: var(--primary-color);
 	}
@@ -77,7 +113,7 @@ a {
 /* END: header media queries */
 
 /* START: hero-section media queries */
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1024px) {
 	.hero {
 		flex-direction: column;
 	}
@@ -128,3 +164,62 @@ a {
 	}
 }
 /* END: hero-section media queries */
+
+/* START: about-us section media queries */
+@media screen and (max-width: 1024px) {
+	.about-us {
+		flex-direction: column-reverse;
+	}
+
+	.about-us__image {
+		flex-direction: row;
+	}
+
+	.about-us__image-sushi3 {
+		border-bottom: none;
+		border-right: 8px solid var(--color-creamson);
+	}
+
+	.about-us__button {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.about-us__image {
+		flex-direction: column;
+	}
+
+	.about-us__image-sushi3 {
+		border-bottom: 8px solid var(--color-creamson);
+		border-right: none;
+	}
+
+	.about-us__button {
+		display: block;
+		top: 47%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.about-us__image-sushi2 img,
+	.about-us__image-sushi3 img {
+		width: 50%;
+		height: 50%;
+
+		object-fit: contain;
+	}
+
+	.about-us__image div {
+		padding: 32px;
+	}
+
+	.about-us__button {
+		top: 45%;
+	}
+
+	.about-us__content {
+		padding: 32px;
+	}
+}
+/* END: about-us section media queries */
