@@ -9,6 +9,7 @@
 @import url("./sections/popular.css");
 @import url("./sections/trending.css");
 @import url("./sections/subcribe.css");
+@import url("./sections/footer.css");
 
 /* CSS variables for reusablity across all files  */
 :root {
@@ -260,6 +261,10 @@ a {
 }
 
 @media screen and (max-width: 550px) {
+	.popular-foods__filters {
+		justify-content: start;
+	}
+
 	.popular-foods__title {
 		font-size: 48px;
 	}
@@ -320,13 +325,13 @@ a {
 		padding: 32px;
 	}
 
-	.trending__content .sushi__title{
+	.trending__content .sushi__title {
 		font-size: 42px;
 	}
 }
 /* END: trending section media queries */
 
-/* START: subscribe media queries */
+/* START: subscribe section media queries */
 @media screen and (max-width: 550px) {
 	.subscription {
 		padding: 64px 32px;
@@ -359,4 +364,17 @@ a {
 		min-width: 100%;
 	}
 }
-/* END: subscribe media queries */
+/* END: subscribe section media queries */
+
+/* START: footer section media queries */
+@media screen and (max-width: 900px) {
+	.footer {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.footer ul {
+		gap: 12px;
+	}
+}
+/* END: footer section media queries */
